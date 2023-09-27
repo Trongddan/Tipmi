@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import RegisterLayout from './layouts/RegisterLayout'
 import HomeLayout from './layouts/HomeLayout'
+import Profile from './pages/Profile'
 
 export default function useRouterElement() {
   const routeElement = useRoutes([
@@ -30,6 +31,13 @@ export default function useRouterElement() {
         <RegisterLayout>
           <Register />
         </RegisterLayout>
+      )
+    },    {
+      path: '/profile/:alo',
+      element: (
+        <HomeLayout>
+          <Profile />
+        </HomeLayout>
       )
     }
   ])
