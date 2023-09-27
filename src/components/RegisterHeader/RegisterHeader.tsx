@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 export default function RegisterHeader() {
   return (
     <header className='py-5'>
-      <div className='max-w-7xl mx-auto px-4'>
-        <nav className='flex items-end'>
+      <div className='px-4 mx-auto max-w-7xl'>
+        <nav className='flex items-center'>
           <Link to='/'>
             <svg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <path

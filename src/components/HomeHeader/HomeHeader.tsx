@@ -17,15 +17,15 @@ export default function HomeHeader() {
   const PopoverContent = () => (
     <div className='bg-cloud w-[50vw] shadow-xl sm:w-[250px] py-2 rounded-md'>
       <ul>
-        <li className='flex gap-2 items-center my-2 mx-3 text-sm sm:text-base cursor-pointer'>
+        <li className='flex items-center gap-2 mx-3 my-2 text-sm cursor-pointer sm:text-base'>
           <AiOutlineProfile color='ee4d2d' size={20} />
-          <p>Trang cá nhân</p>
+          <Link to={'/profile/username'}>Trang cá nhân</Link>
         </li>
-        <li className='flex gap-2 items-center my-2 mx-3 text-sm sm:text-base cursor-pointer'>
+        <li className='flex items-center gap-2 mx-3 my-2 text-sm cursor-pointer sm:text-base'>
           <AiOutlineSetting color='ee4d2d' size={20} />
           <p>Cài đặt</p>
         </li>
-        <li className='flex gap-2 items-center my-2 mx-3 text-sm sm:text-base cursor-pointer'>
+        <li className='flex items-center gap-2 mx-3 my-2 text-sm cursor-pointer sm:text-base'>
           <BiLogOut color='ee4d2d' size={20} />
           <p>Đăng xuất</p>
         </li>
@@ -35,7 +35,7 @@ export default function HomeHeader() {
 
   return (
     <header className='h-[52px] flex items-center'>
-      <div className='w-full mx-auto px-4 flex justify-between'>
+      <div className='flex justify-between w-full px-4 mx-auto'>
         <nav className='flex items-center'>
           <Link to='/'>
             <svg width='40' height='40' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -54,11 +54,11 @@ export default function HomeHeader() {
               />
             </svg>
           </Link>
-          <div className='ml-5 text-xl lg:text-2xl font-extrabold text-orange'>Tipmi</div>
+          <div className='ml-5 text-xl font-extrabold lg:text-2xl text-orange'>Tipmi</div>
         </nav>
         <div>
-          <ul className='flex gap-5 h-full items-center'>
-            <li className='cursor-pointer'>
+          <ul className='flex items-center h-full gap-5 '>
+            <li className='hidden cursor-pointer sm:flex'>
               <BiMessageDetail size={25} color='#ee4d2d' />
             </li>
             <Popover
@@ -71,12 +71,12 @@ export default function HomeHeader() {
                 <Avatar size={35} src={avt} alt='' />
               </li>
             </Popover>
-            <li className='cursor-pointer '>
+            {/* <li className='cursor-pointer '>
               <Link className='flex items-center gap-2' to={'/login'}>
                 Đăng nhập
                 <FiLogIn size={25} color='#ee4d2d' />
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
