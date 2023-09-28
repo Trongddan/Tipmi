@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Avatar from 'src/components/Avatar'
-import { MdOutlineFlipCameraIos } from 'react-icons/md'
+import { AiOutlinePlus } from 'react-icons/ai'
+import Button from 'src/components/ShareComponent/Button'
 export interface Props {
   style?: React.CSSProperties
   className?: string
@@ -25,6 +26,7 @@ export default function BannerComponent({ avt, bg, className, style }: Props) {
         src={bg}
         isEdit
       />
+      <Button title='Thêm bạn bè' className='absolute text-white top-4 right-4' icon={<AiOutlinePlus/>} ></Button>
 
     </div>
   )
