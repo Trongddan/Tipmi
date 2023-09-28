@@ -1,9 +1,11 @@
 import React from 'react'
+import ModalPreview from '../ShareComponent/ModalPreview'
 interface Props {
   listImg: string[]
 }
 export default function ImagePostList({ listImg }: Props) {
   return (
+    <ModalPreview>
     <div className='grid grid-cols-2 gap-[2px] my-3 auto-rows-[150px] lg:auto-rows-[200px] auto-cols-fr rounded-md overflow-hidden'>
       {listImg.length == 1 && (
         <img
@@ -14,11 +16,13 @@ export default function ImagePostList({ listImg }: Props) {
       )}
       {listImg.length == 2 &&
         listImg.map((item, index) => <img key={index} className=' h-full object-cover' src={item} alt='' />)}
-      {listImg.length > 2 &&
-        listImg.map((item, index) => (
-          <img key={index} className='first:row-span-2 h-full w-full object-cover' src={item} alt='' />
-        ))}
+      
+        {listImg.length > 2 &&
+          listImg.map((item, index) => (
+            <img key={index} className='first:row-span-2 h-full w-full object-cover' src={item} alt='' />
+          ))}
     </div>
+      </ModalPreview>
   )
 }
 ;<style></style>

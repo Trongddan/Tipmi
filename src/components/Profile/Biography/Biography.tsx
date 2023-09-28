@@ -2,9 +2,9 @@ import * as React from 'react'
 import { AiFillHome } from 'react-icons/ai'
 import {FaLocationDot} from "react-icons/fa6"
 import {IoIosWifi} from 'react-icons/io'
-export interface Props {}
 
-export default function BioGraphyComponent({}: Props) {
+
+export default function BioGraphyComponent() {
   return (
     <div className='w-full p-3 mt-3 rounded-md shadow-md bg-cloud'>
       <p className='text-base font-semibold'>Giới thiệu</p>
