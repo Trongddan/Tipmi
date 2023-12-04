@@ -2,12 +2,13 @@ import React from 'react'
 import { Popover, ArrowContainer, PopoverPosition } from 'react-tiny-popover'
 interface Props {
   isPopoverOpen: boolean
-  position: PopoverPosition[]
+  position?: PopoverPosition[]
   onClickOutside: () => void
   contentPop: React.ReactElement
-  children: React.ReactElement
+  children: React.ReactElement,
+  colorArr?:string
 }
-export default function PopoverComponent({ isPopoverOpen, onClickOutside, position, children, contentPop }: Props) {
+export default function PopoverComponent({ isPopoverOpen, onClickOutside, position, children, contentPop,colorArr='#fff' }: Props) {
   return (
     <Popover
       isOpen={isPopoverOpen}
@@ -20,7 +21,7 @@ export default function PopoverComponent({ isPopoverOpen, onClickOutside, positi
           position={position}
           childRect={childRect}
           popoverRect={popoverRect}
-          arrowColor={'#fff'}
+          arrowColor={colorArr}
           arrowSize={10}
           arrowStyle={{ opacity: 1 }}
           className='popover-arrow-container'

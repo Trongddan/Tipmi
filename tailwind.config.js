@@ -8,7 +8,8 @@ export const theme = {
       darkness: '#000000',
       bgside: '#f0f2f5',
       bgGreen: '#33cd32',
-      bgOverlay: 'rgba(0, 0, 0, 0.5)'
+      bgOverlay: 'rgba(0, 0, 0, 0.7)',
+      seconde: '#65676b'
     }
   }
 }

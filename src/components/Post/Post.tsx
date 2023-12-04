@@ -6,14 +6,15 @@ import ImagePostList from '../ImagePostList'
 import Like from 'src/assets/icons/Like'
 import Comment from 'src/assets/icons/Comment'
 import Share from 'src/assets/icons/Share'
+import CommentList from '../Comment'
 export default function Post() {
   const photos = [
     'https://source.unsplash.com/2ShvY8Lf6l0/800x599',
-
+    'https://source.unsplash.com/qDkso9nvCg0/600x799',
     'https://source.unsplash.com/Dm-qxdynoEc/800x799',
 
     'https://source.unsplash.com/qDkso9nvCg0/600x799',
-    'https://source.unsplash.com/qDkso9nvCg0/600x799',
+
     'https://source.unsplash.com/qDkso9nvCg0/600x799'
   ]
 
@@ -38,7 +39,7 @@ export default function Post() {
       <div className='action-wrapper flex justify-around py-2 '>
         <div className=' text-sm sm:text-base flex items-center gap-2 py-2 px-1 hover:bg-bgside rounded-md cursor-pointer'>
           <Like />
-          <p >Thích</p>
+          <p>Thích</p>
         </div>
         <div className='text-sm sm:text-base flex  items-center gap-2 py-2 px-1 hover:bg-bgside rounded-md cursor-pointer'>
           <Comment />
@@ -49,6 +50,7 @@ export default function Post() {
           <p>Chia sẻ</p>
         </div>
       </div>
+      <CommentList />
     </div>
   )
 }
